@@ -111,7 +111,7 @@ Canopy.extend(Canopy.Builder.prototype, {
     this.write('(function() {');
     new Canopy.Builder(this).indent_(block, context);
     this.newline_();
-    this.write('})();');
+    this.write('}).call(this);');
     this.newline_();
     this.newline_();
   },

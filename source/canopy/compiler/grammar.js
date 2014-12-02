@@ -76,9 +76,9 @@ Canopy.Compiler.Grammar = {
       builder.line_('Parser.SyntaxNode = SyntaxNode');
 
       var expose = function(builder) {
-        builder.line_(grammar + ' = Grammar');
-        builder.line_(parser  + ' = Parser');
-        builder.line_(parser  + '.formatError = formatError');
+        builder.line_('namespace.' + grammar + ' = Grammar');
+        builder.line_('namespace.' + parser  + ' = Parser');
+        builder.line_('namespace.' + parser  + '.formatError = formatError');
       };
 
       var n = namespace.length, namespaceCondition;
